@@ -1,0 +1,336 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-size:62.5%;
+  font-family:'Source Sans Pro', Arial, Helvetica;
+}
+
+
+
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* HEADER */
+
+
+header {
+  display:flex;
+  justify-content: space-between;
+  position:fixed;
+  background-color: rgb(255, 255, 255);
+  width:100%;
+  margin-bottom:30px;
+  z-index: 10;
+  top:0;
+
+}
+
+.logo {
+  display:flex;
+}
+.logo span{
+  font-size:4rem;
+  display:block;
+  margin-top:30px;
+  color:rgb(110, 21, 6);
+  font-family:'Cabin Sketch';
+  font-weight: bold;
+}
+
+header nav{
+  text-align: center;
+  margin-top:30px;
+}
+
+header ul{
+  display:flex;
+  justify-content: space-around;
+}
+
+header li {
+  display:flex;
+  padding:0 5px;
+  
+}
+
+header div>nav>ul>li>a{
+  font-size:2.5rem;
+  text-decoration:none;
+  padding:5px;
+  color:rgb(110, 21, 6);
+
+}
+
+/* **********************
+          MAIN
+************************* */
+
+main {
+  padding-top:150px;
+  display:block;
+  background-image: url(/Assets/pencils.png);
+  background-size:contain;
+  min-height:800px;
+  background-position:bottom center;
+  background-repeat:no-repeat;
+  text-align:center;
+
+}
+
+main h1{
+  font-size:4rem;
+  font-weight:900;
+  margin:20px 0;
+}
+
+main .abbr{
+  font-size:2rem;
+  color:rgb(110, 21, 6);
+  font-weight:900;
+}
+
+main p{
+  font-size:2rem;
+  color:rgb(110, 21, 6);
+  margin-bottom:30px;
+  text-align: justify;
+  margin-bottom: 60px;
+  padding:10px 20px;
+}
+
+main .register{
+  
+  padding:20px;
+  text-decoration: none;
+  border-radius:10px;
+  background-color: orange;
+  color:white;
+  font-size:2rem;
+  font-weight:bold;
+
+}
+
+.undermain .left img{
+  max-width: max-content;
+}
+
+/* *********************
+        AGENDA
+********************* */
+
+.agenda{
+  text-align: center;
+  font-size:5rem;
+  font-weight:bold;
+  background-image: url(/Assets/shapes-bg-color.png);
+  
+  
+}
+.eventContainer{
+  display:flex;
+  justify-content: center;
+  gap:55px;
+  flex-wrap: wrap;
+  max-width: 75%;
+  margin:auto;
+  margin-top:40px;
+
+  
+}
+
+.colorbox {
+width:300px;
+height:350px;
+border-radius: 30px;
+text-align:left;
+padding:40px;
+box-shadow: 0 10px 10px rgba(153, 149, 149, 0.493);
+position:relative;
+transition: ease-in;
+
+}
+.datebox{
+  background-color:rgba(255, 255, 255, 0.26);
+  position:absolute;
+  border-radius: 10px;
+  min-width: 150px;
+  padding:10px;
+  text-align:center;
+  color:white;
+
+}
+
+.datenum{
+  display:block;
+  
+  font-family: 'Cabin Sketch';
+  font-size: 5.5rem;
+
+}
+
+.month{
+  display:block;
+  font-size: 2.5rem;
+  
+}
+
+.colorone {
+  background-color: rgb(250, 179, 12);
+  
+  
+}
+
+.colortwo {
+  background-color:rgb(50, 96, 221);
+  
+}
+
+.colorthree{
+  
+  background-color: rgb(235, 235, 122);
+}
+
+.colorfour{
+  background-color: rgb(72, 194, 72);
+}
+
+.colorfive{
+  background-color: rgb(168, 67, 235);
+}
+
+.colorsix{
+  background-color:rgb(168, 247, 90)
+}
+
+.colorseven{
+  background-color: rgb(223, 114, 114);
+}
+
+.coloreight{
+  background-color: rgb(29, 199, 185);
+}
+
+.textbox {
+  margin-top:130px;
+  font-size:1.75rem;
+  line-height: 2.5rem;
+  color:white;
+  
+}
+.colorbox:hover{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-1rem);
+  transform:scale(1.1);
+  transition-duration: 300ms;
+  box-shadow: 0 20px 20px rgba(153, 149, 149, 0.589);
+}
+
+.textbox h3 {
+  font-weight:bold;
+  padding-bottom: 8px;
+}
+
+.textbox p{
+  font-weight:400;
+  /* text-shadow: 1px 1px rgba(128, 128, 128, 0.692); */
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* MOBILE SMALL */
+
+@media screen and (min-width:400px){
+
+  main div {
+    max-width:100%;
+    margin:0
+  }
+  .colorbox{
+    padding:30px 25px 40px 40px;
+  }
+}
+
+.undermain{
+  font-size:2rem;
+}
+.undermain .left{
+
+}
+
+/* MOBILE LANDSCAPE */
+
+@media screen and (min-width: 500px){
+  main div{
+    max-width:75%;
+    margin:0 auto;
+    min-height:500px;
+  }
+}
+@media screen and (min-width: 600px){
+  
+}
+
+
+
+/* TABLET */
+
+@media screen and (min-width:768px){
+  main div{
+    max-width:60%;
+  }
+}
+.undermain{
+  /*display:flex;*/
+}
+
+/* SMALL LAPTOP */
+
+@media screen and (min-width: 1000px){
+  main div{
+    max-width:50%;
+  }
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width: 1400px){
+  main{
+    min-height:900px;
+  }
+  main div{
+    max-width:40%;
+  }
+}

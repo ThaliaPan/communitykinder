@@ -67,6 +67,7 @@ header {
 header nav{
   text-align: center;
   margin-top:30px;
+  display:none;
 }
 
 header ul{
@@ -86,6 +87,11 @@ header div>nav>ul>li>a{
   padding:5px;
   color:rgb(110, 21, 6);
 
+}
+header .ham{
+  display:block;
+  fill:rgb(110, 21, 6);
+  margin-top:30px;
 }
 
 /* **********************
@@ -137,8 +143,98 @@ main .register{
 
 }
 
-.undermain .left img{
-  max-width: max-content;
+
+.undermain{
+  font-size:2rem;
+  text-align: center;
+  
+}
+
+.right h2,
+.left h2{
+  color:white;
+  font-size:4rem;
+  font-weight: bold;
+  padding-bottom:40px;
+  
+}
+
+
+
+.undermain .left{
+  background: rgb(253,107,29);
+  background: linear-gradient(90deg, rgba(253,107,29,0.6502976190476191) 50%, rgba(252,176,69,0.7455357142857143) 100%);
+  padding-top: 100px;
+}
+
+.undermain .right{
+  background: rgb(253,107,29);
+background: linear-gradient(270deg, rgba(253,107,29,0.6502976190476191) 50%, rgba(252,176,69,0.7455357142857143) 100%);
+padding-top: 100px;
+}
+
+.undermain p{
+  color:white;
+}
+
+/* 
+*********************
+      MISSION
+********************* */
+
+.mission {
+  background-image: url(/Assets/Background.png);
+  padding:30px 0 60px 0;
+  text-align:center;
+  background-size: cover;
+  padding:10px;
+}
+
+.mission h2{
+  font-size:4rem;
+  font-weight: bold;
+  padding:40px 0;
+  color:rgb(110, 21, 6);
+}
+
+.missiontext{
+  background-color: rgba(248, 246, 218, 0.52);
+  border-radius:10px;
+  padding:10px;
+}
+
+.missiontext p{
+  font-size:2rem;
+  font-weight:400;
+  margin:auto;
+  line-height: 3rem;
+}
+
+/* VOLUNTEERS */
+
+.volunteers{
+  text-align:center;
+  background-color: rgba(243, 251, 208, 0.5);
+  padding:80px 20px 120px 20px;
+}
+
+.volunteers h2{
+  font-size:4rem;
+  font-weight:bold;
+  color:rgb(110, 21, 6);
+  padding-bottom:60px;
+}
+
+.volunteers a{
+  text-decoration:none;
+  color:white;
+  background:orange;
+  font-size:2rem;
+  font-weight:400;
+  padding:10px;
+  margin:10px 10px;
+  border-radius:10px;
+  display:inline-block;
 }
 
 /* *********************
@@ -146,6 +242,7 @@ main .register{
 ********************* */
 
 .agenda{
+  padding:100px 5px;
   text-align: center;
   font-size:5rem;
   font-weight:bold;
@@ -262,6 +359,8 @@ transition: ease-in;
   /* text-shadow: 1px 1px rgba(128, 128, 128, 0.692); */
 }
 
+
+
 footer {
 
 }
@@ -272,7 +371,7 @@ footer {
 
 /* MOBILE SMALL */
 
-@media screen and (min-width:400px){
+@media screen and (min-width:300px){
 
   main div {
     max-width:100%;
@@ -281,14 +380,20 @@ footer {
   .colorbox{
     padding:30px 25px 40px 40px;
   }
+
+  .right .bottom,
+  .left p{
+    padding:30px;
+  }
+
+  header nav{
+    display:hidden;
+
+  }
+  
 }
 
-.undermain{
-  font-size:2rem;
-}
-.undermain .left{
 
-}
 
 /* MOBILE LANDSCAPE */
 
@@ -311,9 +416,38 @@ footer {
   main div{
     max-width:60%;
   }
-}
-.undermain{
-  /*display:flex;*/
+
+.undermain {
+  display:flex;
+  justify-content: space-between;
+  }
+  
+  .undermain .left{
+    
+    width:50%;
+    
+  }
+  
+  .undermain .right{
+    
+    width:50%;
+  
+  }
+  
+
+  .undermain p{
+    width:75%;
+    margin:auto;
+    padding-bottom:80px;
+  }
+  .undermain p.top{
+    padding-bottom:20px;
+  }
+
+  .missiontext{
+    width:75%;
+    margin:auto;
+  }
 }
 
 /* SMALL LAPTOP */
@@ -321,6 +455,20 @@ footer {
 @media screen and (min-width: 1000px){
   main div{
     max-width:50%;
+  }
+  .missiontext{
+    width:65%;
+    margin:auto;
+  }
+  .mission {
+    padding-bottom:40px;
+  }
+  header .ham{
+    display:none;
+  }
+
+  header nav{
+    display:block;
   }
 }
 
@@ -333,4 +481,22 @@ footer {
   main div{
     max-width:40%;
   }
+
+  .missiontext{
+    width:50%;
+    margin:auto;
+  }
+  .mission {
+    padding-bottom:140px;
+  }
+
+  /* LARGE DESKTOP */
+  @media screen and (min-width: 1600px){
+    .missiontext{
+      width:40%;
+      margin:auto;
+      padding:20px;
+    }
+  }
+
 }
